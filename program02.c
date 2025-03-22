@@ -37,7 +37,6 @@ int main()
 }
 
 //Step 5 :Test the Code
-
 /*
     Test case : 1
     Input :  10 11
