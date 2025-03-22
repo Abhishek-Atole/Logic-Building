@@ -35,3 +35,24 @@ int main()
     printf("The Addition of the Two Values is k : %d", k);
     return 0;
 }
+
+//Step 5 :Test the Code
+
+/*
+    Test case : 1
+    Input :  10 11
+    Output : 21
+
+    Test case : 2
+    Input : 12 -6
+    Output : 6
+
+    Test case :3
+    Input : 10 0
+    Output : 10
+
+    Test case : 4
+    Input : -11 -11
+    Output : -22
+    
+*/
