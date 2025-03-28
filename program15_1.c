@@ -24,3 +24,6 @@ int main()
     printf("The Percentage is : %f", fRet);
     return 0;
 }
+
+// Typecasting is Used Here the input is taken as integer but calculation and the answer give the float datatype output
+// For Some time the input consider as float for calculation and proper output
