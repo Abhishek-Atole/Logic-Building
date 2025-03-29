@@ -1,8 +1,9 @@
+//static for loop code
+
 #include <stdio.h>
-void Display()
+void Display(int iNo)
 {
     int iCnt = 0;
-    int iNo = 8;
     //      1           2       3
     for (iCnt = 1; iCnt <= iNo; iCnt++)
     {
@@ -11,6 +12,6 @@ void Display()
 }
 int main()
 {
-    Display();
+    Display(8);
     return 0;
 }
