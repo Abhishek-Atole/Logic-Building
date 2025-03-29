@@ -1,12 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
 void Display()
 {
-    int i=0;
+    int iCnt = 0;
 
-        for(i>=0; i<5;i++)
-        {
-            printf("Jay Ganesh ...\n");
-        }
+    for (iCnt = 1; iCnt <= 5; iCnt++)
+    {
+        printf("Jay Ganesh ...\n");
+    }
 }
 int main()
 {
