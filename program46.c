@@ -2,9 +2,9 @@
 void GetFactor(int iNo)
 {
     int iCnt = 0;
-    printf("The Factors Are : ");
+    printf("The Factors Are : \n");
 
-    for (iCnt = 1; iCnt <= iNo/2; iCnt++)
+    for (iCnt = 1; iCnt < iNo; iCnt++)
     {
         if((iNo % iCnt)== 0)
         {
@@ -25,6 +25,6 @@ int main()
 
 /* 
 
-Space Complexity : O(N) 
+Space Complexity : O(N)
 
 */
