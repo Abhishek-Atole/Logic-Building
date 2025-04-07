@@ -48,17 +48,17 @@ bool PerfectNumber(int iNo)
 int main()
 {
     int iValue = 0;
-    bool iRet = false;
+    bool bRet = false;
 
     // Input from user
     printf("Enter the number: ");
     scanf("%d", &iValue);
 
     // Function call
-    iRet = PerfectNumber(iValue);
+    bRet = PerfectNumber(iValue);
 
     // Output the result based on boolean return
-    if (iRet == true)
+    if (bRet == true)
     {
         printf("%d is a Perfect Number.\n", iValue);
     }
