@@ -64,12 +64,6 @@ Replace `program01` with the desired program name.
 
 ---
 
-## 🤖 Continuous Integration
-
-This repository uses [GitHub Actions](.github/workflows/c-cpp.yml) to automatically build all C programs on every push and pull request.
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome!  
