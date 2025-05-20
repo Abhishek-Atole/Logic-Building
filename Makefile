@@ -1,12 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SOURCES = $(wildcard *.c)
-TARGET = program
+SRC_DIR = src
+BIN_DIR = bin
 
-all: $(TARGET)
+SOURCES = $(wildcard $(SRC_DIR)/*.c)
+TARGETS = $(patsubst $(SRC_DIR)/%.c,$(BIN_DIR)/%,$(SOURCES))
 
-$(TARGET): $(SOURCES)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCES)
+all: $(BIN_DIR) $(TARGETS)
+
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
+
+$(BIN_DIR)/%: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(TARGET)
+	rm -rf $(BIN_DIR)
