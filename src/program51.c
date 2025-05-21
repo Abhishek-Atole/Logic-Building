@@ -1,6 +1,6 @@
-// check wheather yhe number is prime or not
+// check wheather the number is prime or not
 //  concept : a natural number which has only two divisible value ( first  divisible 1 and  second divisible is that number itself)
-
+// dont do this way this si not perfect code
 #include <stdio.h>
 #include <stdbool.h>
 bool CheckPrime(int iNo)
