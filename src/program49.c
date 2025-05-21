@@ -1,5 +1,5 @@
 // Take the input form  user and check that number is perfect number or not
-//perfect number = addition of the factors is equal to the that number
+// perfect number = addition of the factors is equal to the that number
 /*
     Start
         Step 1: Accept a number from the user and store it in a variable iNo
