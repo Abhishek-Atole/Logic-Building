@@ -1,7 +1,7 @@
 // Form Here Problems on Digits started from Here
 #include <stdio.h>
 
-int Display(int iNo)
+int CountDigits(int iNo)
 {
     int iDigit = 0;
     int iCnt = 0;
@@ -21,10 +21,11 @@ int Display(int iNo)
 int main()
 {
     auto int iValue = 0;
+    auto int iRet =0 ;
     printf("Enter the Number : ");
     scanf("%d", &iValue);
-    Display(iValue);
-    printf("No of digits Are : %d", iCnt);
+    iRet = CountDigits(iValue);
+    printf("No of digits Are : %d", iRet);
 
     return 0;
 }
