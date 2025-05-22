@@ -4,7 +4,9 @@
 void Display(int iNo)
 {
     int iDigit = 0;
-    while (iNo != 0)
+    //Joparyanta iNo  0 hot
+    //Nahi Toparyanta
+    while (iNo > 0)
     {
         printf(" -------------------------------------------------------------\n");
         iDigit = iNo % 10;
