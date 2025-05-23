@@ -8,24 +8,22 @@ int FactorMultiplication(int iNo)
     {
         iNo = -iNo;
     }
+    iCnt = iNo / 2;
     while (iNo > iCnt)
     {
         if (iNo % iCnt == 0)
         {
-            iMul = iMul * iCnt;         //Here We Cantnot initialize iMul = 0 because if multiplication  of 0 with 0 is equal  0.
+            printf(" %d\n", iCnt);
         }
-        iCnt++;
+        iCnt--;
     }
-    return iMul;
 }
 
 int main()
 {
     int iValue = 0;
-    int iRet = 0;
     printf("Enter the Number : ");
     scanf("%d", &iValue);
-    iRet = FactorMultiplication(iValue);
-    printf("The Multiplication of Factors are : %d", iRet);
+    FactorMultiplication(iValue);
     return 0;
 }
