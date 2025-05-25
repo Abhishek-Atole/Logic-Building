@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void Display(int *Arr, int iSize)
+void Display(int Arr[], int iSize)
 {
     int iCnt = 0;
 

@@ -36,6 +36,7 @@ int main()              // Main function: Entry point of the program
         // &ptr[iCnt] gives the address where scanf stores the value
         printf("%d\t", ptr[iCnt]);
     }
+    free(ptr);
 
     return 0;   // End of program, return 0 means successful execution
 }
