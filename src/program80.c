@@ -4,7 +4,7 @@
 int MaximumValue(int Arr[],int iSize)
 {
     int iCnt =0 ;
-    int iMax =Arr[0];
+    int iMax =Arr[0];           // Here We store the First element in the array in the maximum value because we have to check that if second elemets is greater or not.
 
     for (iCnt = 0;iCnt <iSize;iCnt++)
     {
