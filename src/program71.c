@@ -10,7 +10,7 @@ void DisplayEven(int Arr[], int iSize)
 
     for (iCnt = 0; iCnt < iSize; iCnt++)
     {
-        if ((Arr[iCnt] % 2) == 0)
+        if ((Arr[iCnt] % 2) == 0)           // Here Arr[iCnt]  is Written because we want the Element storen Not the Index Number.
         {
             printf("%d\t", Arr[iCnt]);
         }
