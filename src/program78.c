@@ -12,7 +12,7 @@ float Average(int Arr[], int iSize)
     {
         iSum = iSum + Arr[iCnt];
     }
-    return ((float)(iSum) / (float)(iSize));
+    return ((float)(iSum) / (float)(iSize));            // Here the Variables are typecasted for float to get precise answer
 }
 
 int main()
