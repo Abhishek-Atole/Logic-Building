@@ -2,19 +2,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int OddCount(int Arr[], int iSize)
+void DisplayOdd(int Arr[], int iSize)
 {
     int iCnt = 0;
     int iOddCnt = 0;
 
     for (iCnt = 0; iCnt < iSize; iCnt++)
     {
-        if ((Arr[iCnt] % 2) != 0)           // Here Arr[iCnt]  is Written because we want the Element storen Not the Index Number.
+        if ((Arr[iCnt] % 2) != 0) // Here Arr[iCnt]  is Written because we want the Element storen Not the Index Number.
         {
-            iOddCnt++;
+            printf("%d\t", Arr[iCnt]);
         }
     }
-    return iOddCnt;
+
     printf("\n");
 }
 
@@ -23,8 +23,7 @@ int main()
     int iCount = 0;
     int *ptr = NULL;
     int iCnt = 0;
-    int iRet = 0;
-
+    printf("Odd Number in an Array is : ");
     printf("Enter the Number of Elements : ");
     scanf("%d", &iCount);
 
@@ -39,8 +38,7 @@ int main()
         scanf("%d", &ptr[iCnt]);
     }
 
-    iRet = OddCount(ptr, iCount);
-    printf("The Odd Numbers Count In an Array is  : %d\n",iRet);
+    DisplayOdd(ptr, iCount);
 
     free(ptr);
     printf("Dynamic Memory Deallocates Successfully.");
