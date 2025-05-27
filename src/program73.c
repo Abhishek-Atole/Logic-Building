@@ -11,7 +11,7 @@ void DisplayOdd(int Arr[], int iSize)
     {
         if ((Arr[iCnt] % 2) != 0) // Here Arr[iCnt]  is Written because we want the Element storen Not the Index Number.
         {
-            printf("%d\t", Arr[iCnt]);
+            printf(" \t %d\t", Arr[iCnt]);
         }
     }
 
@@ -23,7 +23,7 @@ int main()
     int iCount = 0;
     int *ptr = NULL;
     int iCnt = 0;
-    printf("Odd Number in an Array is : ");
+    printf("Odd Number in an Array is : \n");
     printf("Enter the Number of Elements : ");
     scanf("%d", &iCount);
 
@@ -34,7 +34,7 @@ int main()
 
     for (iCnt = 0; iCnt < iCount; iCnt++)
     {
-        printf("Enter the Value of for Index %d : ", iCnt);
+        printf("Enter the Value of for Index %d : \n", iCnt);
         scanf("%d", &ptr[iCnt]);
     }
 
