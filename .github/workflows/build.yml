@@ -1,0 +1,45 @@
+name: Build C, C++, and Java Programs
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential default-jdk
+
+      - name: Create bin directory
+        run: mkdir -p bin
+
+      - name: Compile all C files
+        run: |
+          shopt -s nullglob
+          for file in src/*.c; do
+            exe="bin/$(basename "${file%.*}")"
+            gcc -Wall -Wextra -Werror "$file" -o "$exe"
+          done
+
+      - name: Compile all C++ files
+        run: |
+          shopt -s nullglob
+          for file in src/*.cpp; do
+            exe="bin/$(basename "${file%.*}")"
+            g++ -Wall -Wextra -Werror "$file" -o "$exe"
+          done
+
+      - name: Compile all Java files
+        run: |
+          shopt -s nullglob
+          for file in src/*.java; do
+            javac -d bin "$file"
+          done
+
+      - name: List bin contents
+        run: ls -l bin/
