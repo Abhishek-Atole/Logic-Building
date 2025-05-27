@@ -1,33 +1,21 @@
-# Logic Building in C
+# Logic Building, DSA, and Algorithms in C/C++/Java
 
-Welcome to the **Logic Building in C** repository!  
-This repository contains a comprehensive collection of C,C++,Java programs, exercises, and documentation designed to help learners build strong programming logic and problem-solving skills using the C,C++,Java language.
+[![Build Status](https://github.com/<your-username>/<your-repo>/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/<your-username>/<your-repo>/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+A comprehensive resource for logic building, data structures, algorithms, and LeetCode-style problems in **C**, **C++**, and **Java**. This repository is ideal for students, interview preparation, and anyone looking to strengthen their programming and problem-solving skills.
 
 ---
 
-## 📁 Repository Structure
+## 📂 Repository Structure
 
-- [`src/`](src/)  
-  All C source code files for logic-building exercises and examples.
-
-- [`docs/`](docs/)  
-  Course notes, templates, and additional documentation.  
-  See [01 - How to Write the code .md](docs/01%20-%20How%20to%20Write%20the%20code%20.md) for a general C program template.
-
-- [`bin/`](bin/)  
-  Compiled binaries (created by the build process, not tracked in git).
-
-- [`.github/workflows/`](.github/workflows/)  
-  GitHub Actions workflows for automated CI builds.
-
-- [`.vscode/`](.vscode/)  
-  Visual Studio Code configuration for debugging and development.
-
-- [`organize_repo.bat`](organize_repo.bat)  
-  Script to organize and clean up the repository.
-
-- [`setup_repo.bat`](setup_repo.bat)  
-  Script to initialize all standard files and folders for a professional setup.
+- [`src/`](src/) — All C source code files for logic-building, DSA, and algorithm exercises.
+- [`docs/`](docs/) — Course notes, templates, and additional documentation.
+- [`bin/`](bin/) — Compiled binaries (created by the build process, not tracked in git).
+- [`.github/workflows/`](.github/workflows/) — GitHub Actions workflows for automated CI builds.
+- [`.vscode/`](.vscode/) — Visual Studio Code configuration for debugging and development.
+- [`organize_repo.bat`](organize_repo.bat) — Script to organize and clean up the repository.
+- [`setup_repo.bat`](setup_repo.bat) — Script to initialize all standard files and folders.
 
 ---
 
@@ -35,10 +23,12 @@ This repository contains a comprehensive collection of C,C++,Java programs, exer
 
 ### Prerequisites
 
-- GCC or any C compiler
-- `make` (for build automation, optional but recommended)
+- GCC or any C/C++ compiler
+- Java JDK (for Java programs)
+- `make` (optional, for build automation)
+- Visual Studio Code (optional, for development and debugging)
 
-### Build All Programs
+### Build All C Programs
 
 ```sh
 make
@@ -51,7 +41,6 @@ This will compile all `.c` files in [`src/`](src/) and place the executables in 
 ```sh
 ./bin/program01
 ```
-
 Replace `program01` with the desired program name.
 
 ---
@@ -59,15 +48,35 @@ Replace `program01` with the desired program name.
 ## 📝 Documentation
 
 - General C program template and logic-building steps:  
-  [docs/01 - How to Write the code .md](docs/01%20-%20How%20to%20Write%20the%20code%20.md)
+  [`docs/01 - How to Write the code .md`](docs/01%20-%20How%20to%20Write%20the%20code%20.md)
 - Additional documentation and notes are available in the [`docs/`](docs/) folder.
+
+---
+
+## 🤖 Continuous Integration
+
+This repository uses [GitHub Actions](.github/workflows/c-cpp.yml) to automatically build all C programs on every push and pull request.  
+Check the **Actions** tab for build status.
+
+---
+
+## 🧑‍💻 Development Environment
+
+- Recommended editor: [Visual Studio Code](https://code.visualstudio.com/)
+- Debugging and build tasks are pre-configured in [`.vscode/`](.vscode/).
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome!  
-If you have suggestions for improvements or new exercises, feel free to open an issue or submit a PR.
+Contributions are welcome!  
+To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes.
+4. Push to your branch and open a Pull Request.
+
+Please see [`CONTRIBUTING.md`](CONTRIBUTING.md) if available.
 
 ---
 
@@ -77,4 +86,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Happy Coding! 🚀
+**Happy Coding! 🚀**
+
+---
+
+> _If you find this repository helpful, please star it and share with others!_
