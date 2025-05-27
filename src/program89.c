@@ -1,13 +1,13 @@
 
-//Printing this pAttern on the screen 
-// 1    2   3   4   5   6
-// *    *   *   *   *   *
+//Printing the Number line 
+// -4   -3  -2  -1  0   1   2   3   4
+
 #include<stdio.h>
 
 void Display(int iNo)
 {
     int iCnt =0;
-    for (iCnt =0 ;iCnt <= iNo;iCnt++)
+    for (iCnt =-iNo ;iCnt <= iNo;iCnt++)
     {
         printf("%d\t",iCnt);
     }
