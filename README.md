@@ -1,6 +1,6 @@
 # Logic Building, DSA, and Algorithms in C/C++/Java
 
-[![Build Status](https://github.com/Abhishek-Atole/Logic-Building/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Abhishek-Atole/Logic-Building/actions)
+[![Build C, C++, and Java Programs](https://github.com/Abhishek-Atole/Logic-Building/actions/workflows/main.yml/badge.svg)](https://github.com/Abhishek-Atole/Logic-Building/actions/workflows/main.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A comprehensive resource for logic building, data structures, algorithms, and LeetCode-style problems in **C**, **C++**, and **Java**. This repository is ideal for students, interview preparation, and anyone looking to strengthen their programming and problem-solving skills.
