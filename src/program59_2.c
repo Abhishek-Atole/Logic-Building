@@ -4,7 +4,7 @@
 int CountDigits(int iNo)
 {
     int iCnt = 0;
-    int iDigit =0;
+    int iDigit = 0;
     // Joparyanta iNo  0 hot
     // Nahi Toparyanta
     while (iNo != 0)
@@ -18,7 +18,7 @@ int CountDigits(int iNo)
 int main()
 {
     auto int iValue = 0;
-    auto int iRet =0 ;
+    auto int iRet = 0;
     printf("Enter the Number : ");
     scanf("%d", &iValue);
     iRet = CountDigits(iValue);
