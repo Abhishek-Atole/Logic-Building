@@ -4,7 +4,6 @@
 int SumofDigits(int iNo)
 {
     int iSum = 0;
-    int iDigit = 0;
     // Joparyanta iNo  0 hot
     // Nahi Toparyanta
     while (iNo != 0)
