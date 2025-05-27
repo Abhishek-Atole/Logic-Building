@@ -3,19 +3,17 @@
 
 int SumofDigits(int iNo)
 {
-    int iSum =0;
+    int iSum = 0;
     int iDigit = 0;
     // Joparyanta iNo  0 hot
     // Nahi Toparyanta
     while (iNo != 0)
     {
-        
-        iSum = iSum + (iNo % 10);
-        printf("Isum is : %d \n: ",iSum);
-        iNo = iNo / 10;
-        printf("Ino is  : %d \n",iNo);     
-        
 
+        iSum = iSum + (iNo % 10);
+        printf("Isum is : %d \n: ", iSum);
+        iNo = iNo / 10;
+        printf("Ino is  : %d \n", iNo);
     }
     return iSum;
 }
@@ -23,7 +21,7 @@ int SumofDigits(int iNo)
 int main()
 {
     auto int iValue = 0;
-    auto int iRet =0 ;
+    auto int iRet = 0;
     printf("Enter the Number : ");
     scanf("%d", &iValue);
     iRet = SumofDigits(iValue);
