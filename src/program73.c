@@ -5,8 +5,6 @@
 void DisplayOdd(int Arr[], int iSize)
 {
     int iCnt = 0;
-    int iOddCnt = 0;
-
     for (iCnt = 0; iCnt < iSize; iCnt++)
     {
         if ((Arr[iCnt] % 2) != 0) // Here Arr[iCnt]  is Written because we want the Element storen Not the Index Number.
