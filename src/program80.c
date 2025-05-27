@@ -1,25 +1,24 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int MaximumValue(int Arr[],int iSize)
+int MaximumValue(int Arr[], int iSize)
 {
-    int iCnt =0 ;
-    int iMax =Arr[0];           // Here We store the First element in the array in the maximum value because we have to check that if second elemets is greater or not.
+    int iCnt = 0;
+    int iMax = Arr[0]; // Here We store the First element in the array in the maximum value because we have to check that if second elemets is greater or not.
 
-    for (iCnt = 0;iCnt <iSize;iCnt++)
+    for (iCnt = 0; iCnt < iSize; iCnt++)
     {
-        if(Arr[iCnt] > iMax)
+        if (Arr[iCnt] > iMax)
         {
             iMax = Arr[iCnt];
         }
-        
     }
     return iMax;
 }
 
 int main()
 {
-     int iCount = 0;
+    int iCount = 0;
     int *ptr = NULL;
     int iRet = 0;
     int iCnt = 0;
@@ -42,10 +41,9 @@ int main()
         scanf("%d", &ptr[iCnt]);
     }
 
-    iRet = MaximumValue(ptr ,iCount);
-    printf("The Maximunm Number in the Array is : %d .",iRet);
+    iRet = MaximumValue(ptr, iCount);
+    printf("The Maximunm Number in the Array is : %d .", iRet);
     free(ptr);
 
     return 0;
-
 }
