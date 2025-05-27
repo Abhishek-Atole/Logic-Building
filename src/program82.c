@@ -39,7 +39,7 @@ int main()
     for (iCnt = 0; iCnt < iCount; iCnt++)
     {
         printf("Enter the Numbers for index No %d : \n", iCnt);
-        scanf("%D", &ptr[iCnt]);
+        scanf("%d", &ptr[iCnt]);
     }
     MaximumMinimum(ptr, iCount);
     free(ptr);
