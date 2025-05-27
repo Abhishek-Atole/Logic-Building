@@ -1,7 +1,3 @@
-
-// Printing this pAttern on the screen
-//  1#   2#  3#  4#  5#
-
 #include <stdio.h>
 
 void Display(int iNo)
