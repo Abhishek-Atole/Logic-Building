@@ -1,6 +1,4 @@
-
-//Printing this pAttern on the screen 
-// 1#   2#  3#  4#  5#
+//Reverse order number printing
 
 #include<stdio.h>
 
