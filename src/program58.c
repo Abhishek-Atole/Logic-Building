@@ -16,12 +16,12 @@ int CountDigits(int iNo)
         printf("Value of iNo is : %d\n", iNo); // 72
         iCnt++;
     }
+    return iCnt;
 }
-
 int main()
 {
     auto int iValue = 0;
-    auto int iRet =0 ;
+    auto int iRet = 0;
     printf("Enter the Number : ");
     scanf("%d", &iValue);
     iRet = CountDigits(iValue);
