@@ -23,7 +23,7 @@ void Display(int iRow, int iColumn)
                 }
                 else
                 {
-                    printf("$\t");
+                    printf("\t");
                 }
             }
             printf("\n");
