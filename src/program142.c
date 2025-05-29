@@ -1,7 +1,6 @@
 #include <stdio.h>
 void StrUpr(char str[]) // Here the array is taken as a input to this function
 {
-    int iCnt = 0;
 
     while (*str != '\0')
     {
