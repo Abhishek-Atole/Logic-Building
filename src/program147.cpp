@@ -12,15 +12,14 @@ public:
         iNo = x;
     }
 
-    {
+    
         // logic Here;
-    }
+    
 };
 
 int main()
 {
     int iValue = 0;
-    int iRet = 0;
     cout << "Enter the Number : " << endl;
     cin >> iValue;
 
