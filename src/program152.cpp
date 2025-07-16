@@ -41,13 +41,17 @@ public:
     {
         int iSum = 0;
         int iCnt = 0;
+        cout << "The Even Elemets Are : " << endl;
         for (iCnt = 1; iCnt < iSize; iCnt++)
         {
+
             if ((Arr[iCnt] % 2) == 0)
             {
+                cout << Arr[iCnt] << "\t";
                 iSum = iSum + Arr[iCnt];
             }
         }
+        cout << endl;
         return iSum;
     }
 };

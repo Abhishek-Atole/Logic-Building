@@ -41,26 +41,34 @@ public:
     {
         int iSum = 0;
         int iCnt = 0;
-        for (iCnt = 0; iCnt < iSize; iCnt++)
+        cout << "The Even Elemets Are : " << endl;
+        for (iCnt = 1; iCnt < iSize; iCnt++)
         {
+
             if ((Arr[iCnt] % 2) == 0)
             {
+                cout << Arr[iCnt] << "\t";
                 iSum = iSum + Arr[iCnt];
             }
         }
+        cout << endl;
         return iSum;
     }
     int AdditionOdd()
     {
         int iSum = 0;
         int iCnt = 0;
+        cout << "The odd Elemets Are : " << endl;
+
         for (iCnt = 0; iCnt < iSize; iCnt++)
         {
             if ((Arr[iCnt] % 2) != 0)
             {
+                cout << Arr[iCnt] << "\t";
                 iSum = iSum + Arr[iCnt];
             }
         }
+        cout << endl;
         return iSum;
     }
 };
@@ -68,7 +76,7 @@ public:
 int main()
 {
     int iLength = 0;
-    int iRetEven= 0;
+    int iRetEven = 0;
     int iRetOdd = 0;
     cout << "Enter the Number of Elements of the Array: " << endl;
     cin >> iLength;
@@ -78,8 +86,8 @@ int main()
     aobj->display();
     iRetEven = aobj->AdditionEven();
     iRetOdd = aobj->AdditionOdd();
-    cout << "The Additon of Even Elements :" << iRetEven << endl; 
+    cout << "The Additon of Even Elements :" << iRetEven << endl;
     cout << "The Additon of Odd Elements :" << iRetOdd << endl; // ✅ Displays the entered elements
-    delete aobj;                                              // ✅ Deletes the object and calls destructor to free memory
+    delete aobj;                                                // ✅ Deletes the object and calls destructor to free memory
     return 0;
 }
