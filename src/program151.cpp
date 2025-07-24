@@ -11,24 +11,26 @@ public:
     Array(int x)
     {
         iSize = x;
-        Arr = new int[iSize];
-    }
-    ~Array()
-    {
-        delete[] Arr;
+        Arr = new int[iSize]; // ✅ Dynamically allocates memory on the heap for an array of integers of size iSize
     }
 
-    void Accept() // Function to get the inout for the user for the array elements
+    ~Array()
     {
-        cout << "Enter the Array Elements : " << endl;
+        delete[] Arr; // ✅ Releases the dynamically allocated memory to avoid memory leaks
+    }
+
+    void Accept() // ✅ Accepts user input to fill the array
+    {
+        cout << "Enter the Array Elements: " << endl;
         for (int iCnt = 0; iCnt < iSize; iCnt++)
         {
             cin >> Arr[iCnt];
         }
     }
-    void display() // Function to display the elements of the arry
+
+    void display() // ✅ Displays the elements of the array
     {
-        cout << " The Elements of the array are : " << endl;
+        cout << "The Elements of the array are: " << endl;
         for (int iCnt = 0; iCnt < iSize; iCnt++)
         {
             cout << Arr[iCnt] << "\t";
@@ -36,14 +38,16 @@ public:
         cout << endl;
     }
 };
+
 int main()
 {
     int iLength = 0;
-    cout << "Enter the Number of Elements of an Arry : " << endl;
+    cout << "Enter the Number of Elements of the Array: " << endl;
     cin >> iLength;
-    Array *aobj = new Array(iLength);
-    aobj->Accept();
-    aobj->display();
-    delete aobj;
+
+    Array *aobj = new Array(iLength); // ✅ Dynamically allocates an Array object on the heap using the constructor
+    aobj->Accept();                   // ✅ Calls member function using pointer and arrow operator
+    aobj->display();                  // ✅ Displays the entered elements
+    delete aobj;                      // ✅ Deletes the object and calls destructor to free memory
     return 0;
 }

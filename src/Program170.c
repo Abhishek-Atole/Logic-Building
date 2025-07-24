@@ -11,12 +11,16 @@ typedef struct node NODE;
 typedef struct node *PNODE;
 typedef struct node **PPNODE;
 
-void InsertFirst(struct node **Head, int No)
+void InsertFirst(PPNODE Head, int No)
 {
+    // STEP !: Allocate Memory for NOde
+
     PNODE newn = NULL;
-    newn = (struct node *)malloc(sizeof(struct node));
-    newn->data;
-    newn->next;
+    newn = (PNODE)malloc(sizeof(NODE));
+
+    // STEP 2 :INitialise the node
+    newn->data = No;
+    newn->next = NULL;
 
     if (Head != NULL)
     {
