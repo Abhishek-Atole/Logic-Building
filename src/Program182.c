@@ -5,17 +5,18 @@ struct node
 {
     int data;
     struct node *next;
-    struct node *prev; // #
+    struct node *prev;
 };
 
 typedef struct node NODE;
 typedef struct node *PNODE;
 typedef struct node **PPNODE;
 
-void InsertFirst(PPNODE Head, int NO)
+void InsertFirst(PPNODE Head, int No)
 {
     PNODE newn = (PNODE)malloc(sizeof(NODE));
-    newn->data = NO;
+
+    newn->data = No;
     newn->next = NULL;
     newn->prev = NULL;
 
@@ -26,16 +27,16 @@ void InsertFirst(PPNODE Head, int NO)
     else
     {
         newn->next = *Head;
-        (*Head)->prev = newn; // #
+        (*Head)->prev = newn;
         *Head = newn;
     }
 }
-void InsertLast(PPNODE Head, int NO)
-{
 
+void InsertLast(PPNODE Head, int No)
+{
     PNODE Temp = *Head;
     PNODE newn = (PNODE)malloc(sizeof(NODE));
-    newn->data = NO;
+    newn->data = No;
     newn->next = NULL;
     newn->prev = NULL;
 
@@ -46,53 +47,54 @@ void InsertLast(PPNODE Head, int NO)
     else
     {
         while (Temp->next != NULL)
-        {   
+        {
             Temp = Temp->next;
         }
-        newn->prev = Temp;
+        newn->prev = Temp->next;
         Temp->next = newn;
     }
 }
-void DeleteFirst(PPNODE Head, int NO)
-{
-}
-void DeleteLast(PPNODE Head, int NO)
-{
-}
-void InsertAtPosition(PPNODE Head, int NO, int iPos)
-{
-}
-void DeleteAtPosition(PPNODE Head, int NO, int iPos)
-{
-}
+
 void Display(PNODE Head)
 {
-    printf("Elements of the Linked List Are : \n");
-    printf("| %p | -> ", Head);
+    printf("The Linked List is : \n");
+    printf(" | %p | -> ", Head);
     while (Head != NULL)
     {
-
         printf("| %p | %d | %p | -> ", Head->prev, Head->data, Head->next);
         Head = Head->next;
     }
-    printf("NUll \n");
+    printf(" NULL \n");
 }
-int Count(PNODE Head)
-{
 
-    return 0;
+int Counter(PNODE Head)
+{
+    int iCnt = 0;
+    while (Head != NULL)
+    {
+        iCnt++;
+        Head = Head->next;
+    }
+    return iCnt;
 }
 
 int main()
 {
+    int iRet = 0;
     PNODE First = NULL;
-    InsertFirst(&First, 21);
-    InsertFirst(&First, 20);
-    InsertFirst(&First, 19);
-    Display(First);
 
-    InsertLast(&First, 22);
+    InsertFirst(&First, 14);
+    InsertFirst(&First, 12);
+    InsertFirst(&First, 10);
     Display(First);
+    iRet = Counter(First);
+    printf("The No of Nodes are : %d\n", iRet);
+
+    InsertLast(&First, 16);
+    InsertLast(&First, 17);
+    Display(First);
+    iRet = Counter(First);
+    printf("The No of Nodes are : %d\n", iRet);
 
     return 0;
 }
