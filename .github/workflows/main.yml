@@ -18,7 +18,7 @@ jobs:
       - name: Create bin directory
         run: mkdir -p bin
 
-      - name: Compile all C files
+      - name: Compile all C files (excluding Strivers folder)
         run: |
           shopt -s nullglob
           for file in src/*.c; do
@@ -26,7 +26,7 @@ jobs:
             gcc -Wall -Wextra -Werror "$file" -o "$exe"
           done
 
-      - name: Compile all C++ files
+      - name: Compile all C++ files (excluding Strivers folder)
         run: |
           shopt -s nullglob
           for file in src/*.cpp; do
@@ -34,7 +34,7 @@ jobs:
             g++ -Wall -Wextra -Werror "$file" -o "$exe"
           done
 
-      - name: Compile all Java files
+      - name: Compile all Java files (excluding Strivers folder)
         run: |
           shopt -s nullglob
           for file in src/*.java; do
