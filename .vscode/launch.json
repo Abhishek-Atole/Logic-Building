@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "Pattern01",
+            "request": "launch",
+            "mainClass": "Pattern01",
+            "projectName": "Logic-Building_320edd3d"
+        },
+        {
             "type": "cmake",
             "request": "launch",
             "name": "Debug portfile(s)",

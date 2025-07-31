@@ -3,3 +3,7 @@
 *.out
 *.obj
 /bin/
+*.class
+
+C - Languge Based DSA Projects/Practice.c
+C - Languge Based DSA Projects/dlist_data.txt
