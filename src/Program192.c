@@ -13,7 +13,7 @@ void InsertFirst(PPNODE Head, PPNODE Tail, int No)
     newn->data = No;
     newn->next = NULL;
 
-    if ((*Head = NULL) && (*Tail == NULL))
+    if ((*Head == NULL) && (*Tail == NULL))
     {
         *Head = newn;
         *Tail = newn;
