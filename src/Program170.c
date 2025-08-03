@@ -22,7 +22,7 @@ void InsertFirst(PPNODE Head, int No)
     newn->data = No;
     newn->next = NULL;
 
-    if (Head != NULL)
+    if (*Head == NULL)
     {
         *Head = newn;
     }
@@ -31,7 +31,6 @@ void InsertFirst(PPNODE Head, int No)
         newn->next = *Head;
         *Head = newn;
     }
-    printf("Null \n");
 }
 void Display(PNODE Head)
 {
