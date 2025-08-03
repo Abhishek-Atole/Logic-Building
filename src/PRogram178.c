@@ -164,8 +164,7 @@ void DeleteAtPosition(PPNODE Head, int iPos)
     int i = 0;
     PNODE Temp = *Head;
     PNODE TargetedNode = NULL;
-    PNODE newn = NULL;
-
+    
     if ((iPos < 1) || (iPos > iSize))
     {
         printf(" Invalid POsition \n");
