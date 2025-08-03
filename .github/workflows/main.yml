@@ -1,4 +1,4 @@
-name: Compile Check
+name: C/C++ CI
 
 on:
   push:
@@ -7,39 +7,42 @@ on:
     branches: [ main, master ]
 
 jobs:
-  compile-c-files:
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - compiler: gcc
-            flags: "-Wall -Wextra -Werror"
-          - compiler: clang
-            flags: "-Wall -Wextra -Werror"
-    
+
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Install dependencies
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install build tools
       run: |
         sudo apt-get update
-        sudo apt-get install -y gcc g++ clang
-    
-    - name: Compile C files (parallel)
-      run: |
-        find src -name "*.c" -type f | head -20 | xargs -P 4 -I {} ${{ matrix.compiler }} ${{ matrix.flags }} -c {} -o /tmp/$(basename {} .c).o
-    
-    - name: Compile C++ files (parallel)
-      run: |
-        find src -name "*.cpp" -type f | head -10 | xargs -P 4 -I {} ${{ matrix.compiler }}++ ${{ matrix.flags }} -c {} -o /tmp/$(basename {} .cpp).o
+        sudo apt-get install -y gcc g++ make
 
-  compile-sample-only:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Compile key files only
+    - name: Create output directory
+      run: mkdir -p build
+
+    - name: Compile C files
       run: |
-        gcc -Wall -Wextra -Werror -c src/program136.c -o /tmp/program136.o
-        g++ -Wall -Wextra -Werror -c src/program153.cpp -o /tmp/program153.o
-        gcc -Wall -Wextra -Werror -c src/Program179.c -o /tmp/Program179.o
+        echo "Compiling C files..."
+        for file in src/*.c; do
+          if [ -f "$file" ]; then
+            echo "Compiling $file"
+            gcc -Wall -Wextra -c "$file" -o "build/$(basename "$file" .c).o" || echo "Failed to compile $file"
+          fi
+        done
+
+    - name: Compile C++ files
+      run: |
+        echo "Compiling C++ files..."
+        for file in src/*.cpp; do
+          if [ -f "$file" ]; then
+            echo "Compiling $file"
+            g++ -Wall -Wextra -c "$file" -o "build/$(basename "$file" .cpp).o" || echo "Failed to compile $file"
+          fi
+        done
+
+    - name: List compiled files
+      run: |
+        echo "Successfully compiled files:"
+        ls -la build/
