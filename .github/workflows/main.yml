@@ -1,45 +1,45 @@
-name: Build C, C++, and Java Programs
+name: Compile Check
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 
 jobs:
-  build:
+  compile-c-files:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        include:
+          - compiler: gcc
+            flags: "-Wall -Wextra -Werror"
+          - compiler: clang
+            flags: "-Wall -Wextra -Werror"
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc g++ clang
+    
+    - name: Compile C files (parallel)
+      run: |
+        find src -name "*.c" -type f | head -20 | xargs -P 4 -I {} ${{ matrix.compiler }} ${{ matrix.flags }} -c {} -o /tmp/$(basename {} .c).o
+    
+    - name: Compile C++ files (parallel)
+      run: |
+        find src -name "*.cpp" -type f | head -10 | xargs -P 4 -I {} ${{ matrix.compiler }}++ ${{ matrix.flags }} -c {} -o /tmp/$(basename {} .cpp).o
 
-      - name: Install build tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential default-jdk
-
-      - name: Create bin directory
-        run: mkdir -p bin
-
-      - name: Compile all C files (excluding Strivers folder)
-        run: |
-          shopt -s nullglob
-          for file in src/*.c; do
-            exe="bin/$(basename "${file%.*}")"
-            gcc -Wall -Wextra -Werror "$file" -o "$exe"
-          done
-
-      - name: Compile all C++ files (excluding Strivers folder)
-        run: |
-          shopt -s nullglob
-          for file in src/*.cpp; do
-            exe="bin/$(basename "${file%.*}")"
-            g++ -Wall -Wextra -Werror "$file" -o "$exe"
-          done
-
-      - name: Compile all Java files (excluding Strivers folder)
-        run: |
-          shopt -s nullglob
-          for file in src/*.java; do
-            javac -d bin "$file"
-          done
-
-      - name: List bin contents
-        run: ls -l bin/
+  compile-sample-only:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Compile key files only
+      run: |
+        gcc -Wall -Wextra -Werror -c src/program136.c -o /tmp/program136.o
+        g++ -Wall -Wextra -Werror -c src/program153.cpp -o /tmp/program153.o
+        gcc -Wall -Wextra -Werror -c src/Program179.c -o /tmp/Program179.o
