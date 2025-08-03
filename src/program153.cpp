@@ -18,7 +18,16 @@ public:
 
     int Display()
     {
-        // Logic Here
+        int i, j = 0;
+        for (i = 1; i <= iRows; i++)
+        {
+            for (j = 1; j <= iCols; j++)
+            {
+                cout << "* ";
+            }
+            cout << endl;
+        }
+        return 0;
     }
 };
 

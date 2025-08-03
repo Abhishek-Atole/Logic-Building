@@ -52,7 +52,11 @@ void DeleteFirst(PPNODE Head, PPNODE Tail)
 void DeleteLast(PPNODE Head, PPNODE Tail)
 {
 }
-void Display(PNODE Head, PNODE Tail) {}
+void Display(PNODE Head, PNODE Tail) 
+{
+    (void)Head; // Suppress unused parameter warning
+    (void)Tail;
+}
 int Counter(PNODE Head, PNODE Tail) { return 0; }
 void InsertAtPosition(PPNODE Head, PPNODE Tail, int No, int iPos)
 {

@@ -12,9 +12,10 @@ public:
         iNo = x;
     }
 
-    
-        // logic Here;
-    
+    void Display()
+    {
+        cout << "Number is: " << iNo << endl;
+    }
 };
 
 int main()
@@ -24,5 +25,6 @@ int main()
     cin >> iValue;
 
     Number nobj(iValue);
+    nobj.Display();
     return 0;
 }
