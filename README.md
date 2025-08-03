@@ -254,9 +254,9 @@ git push origin feature/new-algorithm
 
 **🌟 If this repository demonstrates the technical skills you're looking for, let's connect!**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/yourprofile)
-[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:your.email@domain.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-View-green)](https://yourportfolio.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/abhishekatole/)
+[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:abhiatole03@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-View-green)](https://abhishekatole.netlify.app/)
 
 *Ready to contribute to your next C/C++ project with production-ready code and embedded systems expertise.*
 
