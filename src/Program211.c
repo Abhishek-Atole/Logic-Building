@@ -367,6 +367,7 @@ int main()
 
     GetDataFromPosition(First, Last, 2);
     GetDataFromPosition(First, Last, 4);
+    GetDataFromPosition(First, Last, 5);
     GetDataFromPosition(First, Last, 10);
 
     return 0;
