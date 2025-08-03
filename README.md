@@ -250,12 +250,6 @@ git push origin feature/new-algorithm
 
 ---
 
-## 📄 **License**
-
-This project is licensed under the [MIT License](LICENSE) - see the license file for details.
-
----
-
 <div align="center">
 
 **🌟 If this repository demonstrates the technical skills you're looking for, let's connect!**
