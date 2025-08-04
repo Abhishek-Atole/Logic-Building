@@ -160,7 +160,6 @@ void DeleteAtPosition(PPNODE Head, PPNODE Tail, int iPos)
 {
     int iSize = NodeCounter(*Head, *Tail);
     PNODE Temp = *Head;
-    PNODE TargetNode = NULL;
 
     if ((iPos < 1) || (iPos > iSize))
     {
@@ -182,8 +181,7 @@ void DeleteAtPosition(PPNODE Head, PPNODE Tail, int iPos)
         {
             Temp = Temp->next;
         }
-        TargetNode = Temp->next;
-        Temp->next = TargetNode->next;
+        Temp->next = TargetNode->next->next;
         TargetNode->next->prev = Temp;
         free(TargetNode);
     }
