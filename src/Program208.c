@@ -181,9 +181,9 @@ void DeleteAtPosition(PPNODE Head, PPNODE Tail, int iPos)
         {
             Temp = Temp->next;
         }
-        Temp->next = TargetNode->next->next;
-        TargetNode->next->prev = Temp;
-        free(TargetNode);
+        Temp->next = Temp->next->next;
+        free(Temp->next->prev);
+        Temp->next ->prev = Temp;
     }
 }
 int main()
