@@ -14,12 +14,7 @@ private:
     int iCount;
 
 public:
-    SinglyLL()
-    {
-        First = NULL;
-        iCount = 0;
-    }
-
+    SinglyLL();
     void InsertFirst(int No);
     void InsertLast(int no);
     void DeleteFirst();
@@ -38,6 +33,14 @@ public:
     }
 
 */
+
+SinglyLL :: SinglyLL()
+{
+    
+        First = NULL;
+        iCount = 0;
+
+}
 
 void SinglyLL ::InsertFirst(int No)
 {
