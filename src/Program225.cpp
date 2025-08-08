@@ -73,10 +73,11 @@ void SinglyLL ::InsertLast(int no)
     }
     else
     {
-        for (int iCnt = 0; iCnt < iCount - 1; iCnt++)
+        while (Temp->next != NULL)
         {
             Temp = Temp->next;
         }
+
         Temp->next = newn;
     }
     iCount++;
