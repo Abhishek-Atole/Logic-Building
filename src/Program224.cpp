@@ -108,13 +108,13 @@ void SinglyLL ::DeleteFirst()
     }
     else if (First->next == NULL)
     {
-        delete (First);
+        delete First;
         First = NULL;
     }
     else
     {
         First = First->next;
-        delete (Temp);
+        delete Temp;
     }
     iCount--;
 }
@@ -129,7 +129,7 @@ void SinglyLL::DeleteLast()
     }
     else if (First->next == NULL)
     {
-        delete (First);
+        delete First;
         First = NULL;
     }
     else
@@ -138,7 +138,7 @@ void SinglyLL::DeleteLast()
         {
             Temp = Temp ->next;
         }
-        delete(Temp ->next);
+        delete Temp ->next;
         Temp->next = NULL;
     }
     iCount--;
