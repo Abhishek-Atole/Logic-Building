@@ -88,8 +88,12 @@ int main()
     SinglyLL obj;
     obj.InsertFirst(5);
     obj.InsertFirst(4);
+    obj.InsertFirst(3);
+    obj.InsertFirst(2);
+    obj.InsertFirst(1);
 
     obj.InsertLast(6);
+    obj.InsertLast(7);
 
     obj.Display();
 
