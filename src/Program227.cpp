@@ -18,6 +18,7 @@ private:
 
 public:
     SinglyCL();
+    ~SinglyCL();
     void InsertFirst(int No);
     void InsertLast(int No);
     void InsertAtPosition(int No, int iPos);
@@ -30,6 +31,31 @@ public:
 
 SinglyCL::SinglyCL()
 {
+    First = NULL;
+    Last = NULL;
+    iCount = 0;
+}
+
+SinglyCL::~SinglyCL()
+{
+    if (First == NULL) // (1) Empty list? Nothing to delete
+        return;
+
+    PNODE temp = First;
+    PNODE nextNode = NULL;
+
+    // (2) Break the circular link to avoid infinite loop
+    Last->next = NULL;
+
+    // (3) Standard singly linked list deletion
+    while (temp != NULL)
+    {
+        nextNode = temp->next; // store next node
+        delete temp;           // free current node
+        temp = nextNode;       // move to next node
+    }
+
+    // (4) Reset members
     First = NULL;
     Last = NULL;
     iCount = 0;
@@ -119,7 +145,7 @@ void SinglyCL::DeleteFirst()
     {
         delete First;
         First = NULL;
-        Last =NULL;
+        Last = NULL;
     }
     else
     {
@@ -141,7 +167,7 @@ void SinglyCL::DeleteLast()
     {
         delete First;
         First = NULL;
-        Last =NULL;
+        Last = NULL;
     }
     else
     {
@@ -151,7 +177,7 @@ void SinglyCL::DeleteLast()
             Temp = Temp->next;
         }
         delete Last;
-        Last = Temp;        
+        Last = Temp;
         Last->next = First;
     }
     iCount--;
@@ -190,7 +216,8 @@ void SinglyCL ::DeleteAtPosition(int iPos)
 void SinglyCL ::Display()
 {
     PNODE Temp = First;
-    if (First == NULL) return;
+    if (First == NULL)
+        return;
 
     cout << "Singly Circular List : ";
     cout << " | " << First << " | -> " << " | " << Last << " | -> " << endl;
