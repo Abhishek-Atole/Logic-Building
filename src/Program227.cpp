@@ -18,7 +18,6 @@ private:
 
 public:
     SinglyCL();
-    ~SinglyCL();
     void InsertFirst(int No);
     void InsertLast(int No);
     void InsertAtPosition(int No, int iPos);
@@ -34,25 +33,6 @@ SinglyCL::SinglyCL()
     First = NULL;
     Last = NULL;
     iCount = 0;
-}
-
-SinglyCL::~SinglyCL()
-{
-    if (First == NULL)
-        return; // Empty list
-
-    PNODE current = First;
-    PNODE next;
-
-    do
-    {
-        next = current->next;
-        delete current;
-        current = next;
-    } while (current != First);
-
-    First = NULL;
-    Last = NULL;
 }
 
 void SinglyCL ::InsertFirst(int No)
